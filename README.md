@@ -43,6 +43,25 @@ Prometheus is available at <http://127.0.0.1:9090>, Loki at
 <http://127.0.0.1:3100>, and Tempo at <http://127.0.0.1:3200> for local
 troubleshooting. All observability configuration is stored in `observability/`.
 
+## Incident responder
+
+Start the automatic incident responder in a separate terminal:
+
+```bash
+./incident-response/run.sh
+```
+
+It accepts Grafana-compatible webhooks at `POST http://127.0.0.1:8001/alerts`.
+For each firing alert it saves the alert, recent Loki logs, and recent Tempo
+traces under `incident-response/incidents/`, then runs Codex headlessly. Check
+the latest run with:
+
+```bash
+curl http://127.0.0.1:8001/incidents/latest
+```
+
+See `incident-response/README.md` for the test request and configuration.
+
 ## API
 
 | Method | Path | Purpose |

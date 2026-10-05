@@ -1,0 +1,16 @@
+{
+  "dashboard_url": null,
+  "endpoint": "unknown",
+  "loki_query": "{service_name=\"order-tracker\"}",
+  "query_end": "2026-10-05T23:05:12.749477Z",
+  "query_start": "2026-10-05T23:02:42.749477Z",
+  "tempo_query": "{ resource.service.name = \"order-tracker\" }",
+  "time_window": "60 seconds",
+  "trace_ids": [
+    "3552c83be66e30964d568e0207f9ae1c",
+    "5436fa25feeebf360cb6769e917dad89",
+    "763e1463f0e7c288b4fc96a158726c39",
+    "b5591a581f030a3bbe07e0789b1962f6",
+    "ca254e111ce2bc128c524439cffd2eea"
+  ]
+}

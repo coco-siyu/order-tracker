@@ -1,0 +1,8 @@
+{
+  "search": {
+    "error": "URLError",
+    "message": "<urlopen error [Errno 61] Connection refused>",
+    "url": "http://127.0.0.1:3200/api/search?q=%7B+resource.service.name+%3D+%22order-tracker%22+%7D&start=1791240986&end=1791241136&limit=50"
+  },
+  "traces": {}
+}

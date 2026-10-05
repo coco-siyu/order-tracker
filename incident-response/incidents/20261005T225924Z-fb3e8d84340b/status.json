@@ -1,0 +1,7 @@
+{
+  "exit_code": 0,
+  "finished_at": "2026-10-05T22:59:52.303870Z",
+  "incident_id": "20261005T225924Z-fb3e8d84340b",
+  "response": "Inspected all saved evidence: `alert.json`, `context.json`, `logs.json`, and `traces.json`.\n\nConfirmed:\n\n- Alert is labeled `test: true`.\n- Summary says no incident to fix.\n- Endpoint is unknown.\n- Loki and Tempo queries failed with connection refused.\n- No traces were found.\n- No files or application code were modified.\n\nTEST ALERT RECEIVED - no incident to fix",
+  "state": "completed"
+}

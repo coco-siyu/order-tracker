@@ -1,0 +1,5 @@
+{
+  "error": "URLError",
+  "message": "<urlopen error [Errno 61] Connection refused>",
+  "url": "http://127.0.0.1:3100/loki/api/v1/query_range?query=%7Bservice_name%3D%22order-tracker%22%7D&start=1791241044795737088&end=1791241194795737088&limit=250&direction=backward"
+}

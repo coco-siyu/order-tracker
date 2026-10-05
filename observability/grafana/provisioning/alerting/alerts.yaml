@@ -1,0 +1,76 @@
+apiVersion: 1
+
+groups:
+  - orgId: 1
+    name: order-tracker-http-errors
+    folder: Order Tracker
+    interval: 10s
+    rules:
+      - uid: order-tracker-5xx
+        title: Order Tracker 5xx responses
+        condition: B
+        data:
+          - refId: A
+            relativeTimeRange:
+              from: 600
+              to: 0
+            datasourceUid: prometheus
+            model:
+              datasource:
+                type: prometheus
+                uid: prometheus
+              editorMode: code
+              expr: >-
+                sum by (http_route) (
+                  increase(http_server_request_duration_seconds_count{
+                    service_name="order-tracker",
+                    http_response_status_code=~"5.."
+                  }[1m])
+                ) or on() vector(0)
+              instant: true
+              intervalMs: 1000
+              legendFormat: "{{ http_route }}"
+              maxDataPoints: 43200
+              range: false
+              refId: A
+          - refId: B
+            relativeTimeRange:
+              from: 0
+              to: 0
+            datasourceUid: __expr__
+            model:
+              conditions:
+                - evaluator:
+                    params: [0]
+                    type: gt
+                  operator:
+                    type: and
+                  query:
+                    params: [B]
+                  reducer:
+                    params: []
+                    type: last
+                  type: query
+              datasource:
+                type: __expr__
+                uid: __expr__
+              expression: "$A > 0"
+              intervalMs: 1000
+              maxDataPoints: 43200
+              refId: B
+              type: math
+        dashboardUid: order-tracker-observability
+        panelId: 2
+        noDataState: OK
+        execErrState: Error
+        for: 0s
+        annotations:
+          summary: "5xx responses detected on {{ $labels.http_route }}"
+          description: "Endpoint {{ $labels.http_route }} returned at least one 5xx response during the last 1 minute."
+          endpoint: "{{ $labels.http_route }}"
+          time_window: "1 minute"
+          dashboard_url: "http://127.0.0.1:3000/d/order-tracker-observability/order-tracker-observability"
+        labels:
+          service: order-tracker
+          severity: warning
+        isPaused: false

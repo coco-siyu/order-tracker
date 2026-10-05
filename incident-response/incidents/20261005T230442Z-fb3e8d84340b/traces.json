@@ -1,0 +1,1419 @@
+{
+  "search": {
+    "metrics": {
+      "completedJobs": 2,
+      "inspectedBytes": "64122",
+      "totalJobs": 2
+    },
+    "traces": [
+      {
+        "rootServiceName": "order-tracker",
+        "rootTraceName": "GET /healthz",
+        "serviceStats": {
+          "order-tracker": {
+            "spanCount": 3
+          }
+        },
+        "spanSet": {
+          "matched": 3,
+          "spans": [
+            {
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ],
+              "durationNanos": "12416",
+              "spanID": "fdfd964a71e5408c",
+              "startTimeUnixNano": "1791241465197568460"
+            },
+            {
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ],
+              "durationNanos": "8542",
+              "spanID": "99f5ec532cbedd84",
+              "startTimeUnixNano": "1791241465197800168"
+            },
+            {
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ],
+              "durationNanos": "638083",
+              "spanID": "924ccfce5d40e374",
+              "startTimeUnixNano": "1791241465197220460"
+            }
+          ]
+        },
+        "spanSets": [
+          {
+            "matched": 3,
+            "spans": [
+              {
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  }
+                ],
+                "durationNanos": "12416",
+                "spanID": "fdfd964a71e5408c",
+                "startTimeUnixNano": "1791241465197568460"
+              },
+              {
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  }
+                ],
+                "durationNanos": "8542",
+                "spanID": "99f5ec532cbedd84",
+                "startTimeUnixNano": "1791241465197800168"
+              },
+              {
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  }
+                ],
+                "durationNanos": "638083",
+                "spanID": "924ccfce5d40e374",
+                "startTimeUnixNano": "1791241465197220460"
+              }
+            ]
+          }
+        ],
+        "startTimeUnixNano": "1791241465197220460",
+        "traceID": "b5591a581f030a3bbe07e0789b1962f6"
+      },
+      {
+        "rootServiceName": "order-tracker",
+        "rootTraceName": "GET /healthz",
+        "serviceStats": {
+          "order-tracker": {
+            "spanCount": 3
+          }
+        },
+        "spanSet": {
+          "matched": 3,
+          "spans": [
+            {
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ],
+              "durationNanos": "12625",
+              "spanID": "d1db0039e7edf3eb",
+              "startTimeUnixNano": "1791241460093075263"
+            },
+            {
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ],
+              "durationNanos": "5375",
+              "spanID": "7a0eded7ee69ec33",
+              "startTimeUnixNano": "1791241460093244138"
+            },
+            {
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ],
+              "durationNanos": "538833",
+              "spanID": "c93831eacee2f364",
+              "startTimeUnixNano": "1791241460092746722"
+            }
+          ]
+        },
+        "spanSets": [
+          {
+            "matched": 3,
+            "spans": [
+              {
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  }
+                ],
+                "durationNanos": "12625",
+                "spanID": "d1db0039e7edf3eb",
+                "startTimeUnixNano": "1791241460093075263"
+              },
+              {
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  }
+                ],
+                "durationNanos": "5375",
+                "spanID": "7a0eded7ee69ec33",
+                "startTimeUnixNano": "1791241460093244138"
+              },
+              {
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  }
+                ],
+                "durationNanos": "538833",
+                "spanID": "c93831eacee2f364",
+                "startTimeUnixNano": "1791241460092746722"
+              }
+            ]
+          }
+        ],
+        "startTimeUnixNano": "1791241460092746722",
+        "traceID": "3552c83be66e30964d568e0207f9ae1c"
+      },
+      {
+        "rootServiceName": "order-tracker",
+        "rootTraceName": "GET /healthz",
+        "serviceStats": {
+          "order-tracker": {
+            "spanCount": 3
+          }
+        },
+        "spanSet": {
+          "matched": 3,
+          "spans": [
+            {
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ],
+              "durationNanos": "13417",
+              "spanID": "0b5a24beb3b64caf",
+              "startTimeUnixNano": "1791241454990504677"
+            },
+            {
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ],
+              "durationNanos": "11541",
+              "spanID": "565956eb42624ca9",
+              "startTimeUnixNano": "1791241454990746261"
+            },
+            {
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ],
+              "durationNanos": "630250",
+              "spanID": "f52b292f428eb117",
+              "startTimeUnixNano": "1791241454990166677"
+            }
+          ]
+        },
+        "spanSets": [
+          {
+            "matched": 3,
+            "spans": [
+              {
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  }
+                ],
+                "durationNanos": "13417",
+                "spanID": "0b5a24beb3b64caf",
+                "startTimeUnixNano": "1791241454990504677"
+              },
+              {
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  }
+                ],
+                "durationNanos": "11541",
+                "spanID": "565956eb42624ca9",
+                "startTimeUnixNano": "1791241454990746261"
+              },
+              {
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  }
+                ],
+                "durationNanos": "630250",
+                "spanID": "f52b292f428eb117",
+                "startTimeUnixNano": "1791241454990166677"
+              }
+            ]
+          }
+        ],
+        "startTimeUnixNano": "1791241454990166677",
+        "traceID": "5436fa25feeebf360cb6769e917dad89"
+      },
+      {
+        "rootServiceName": "order-tracker",
+        "rootTraceName": "GET /healthz",
+        "serviceStats": {
+          "order-tracker": {
+            "spanCount": 3
+          }
+        },
+        "spanSet": {
+          "matched": 3,
+          "spans": [
+            {
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ],
+              "durationNanos": "18375",
+              "spanID": "0617909b84dfccfe",
+              "startTimeUnixNano": "1791241449887933717"
+            },
+            {
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ],
+              "durationNanos": "7708",
+              "spanID": "ff4d409ac75b4aee",
+              "startTimeUnixNano": "1791241449888230467"
+            },
+            {
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ],
+              "durationNanos": "817958",
+              "spanID": "d1bba7653f6457ae",
+              "startTimeUnixNano": "1791241449887475092"
+            }
+          ]
+        },
+        "spanSets": [
+          {
+            "matched": 3,
+            "spans": [
+              {
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  }
+                ],
+                "durationNanos": "18375",
+                "spanID": "0617909b84dfccfe",
+                "startTimeUnixNano": "1791241449887933717"
+              },
+              {
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  }
+                ],
+                "durationNanos": "7708",
+                "spanID": "ff4d409ac75b4aee",
+                "startTimeUnixNano": "1791241449888230467"
+              },
+              {
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  }
+                ],
+                "durationNanos": "817958",
+                "spanID": "d1bba7653f6457ae",
+                "startTimeUnixNano": "1791241449887475092"
+              }
+            ]
+          }
+        ],
+        "startTimeUnixNano": "1791241449887475092",
+        "traceID": "ca254e111ce2bc128c524439cffd2eea"
+      },
+      {
+        "durationMs": 6,
+        "rootServiceName": "order-tracker",
+        "rootTraceName": "GET /healthz",
+        "serviceStats": {
+          "order-tracker": {
+            "spanCount": 3
+          }
+        },
+        "spanSet": {
+          "matched": 3,
+          "spans": [
+            {
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ],
+              "durationNanos": "19417",
+              "spanID": "119a235737cf3499",
+              "startTimeUnixNano": "1791241444793986006"
+            },
+            {
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ],
+              "durationNanos": "7500",
+              "spanID": "babb9037de09c1c6",
+              "startTimeUnixNano": "1791241444794212798"
+            },
+            {
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ],
+              "durationNanos": "6361958",
+              "spanID": "728828e255e60a56",
+              "startTimeUnixNano": "1791241444787906881"
+            }
+          ]
+        },
+        "spanSets": [
+          {
+            "matched": 3,
+            "spans": [
+              {
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  }
+                ],
+                "durationNanos": "19417",
+                "spanID": "119a235737cf3499",
+                "startTimeUnixNano": "1791241444793986006"
+              },
+              {
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  }
+                ],
+                "durationNanos": "7500",
+                "spanID": "babb9037de09c1c6",
+                "startTimeUnixNano": "1791241444794212798"
+              },
+              {
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  }
+                ],
+                "durationNanos": "6361958",
+                "spanID": "728828e255e60a56",
+                "startTimeUnixNano": "1791241444787906881"
+              }
+            ]
+          }
+        ],
+        "startTimeUnixNano": "1791241444787906881",
+        "traceID": "763e1463f0e7c288b4fc96a158726c39"
+      }
+    ]
+  },
+  "traces": {
+    "3552c83be66e30964d568e0207f9ae1c": {
+      "metrics": {
+        "inspectedBytes": "30966"
+      },
+      "trace": {
+        "resourceSpans": [
+          {
+            "resource": {
+              "attributes": [
+                {
+                  "key": "service.instance.id",
+                  "value": {
+                    "stringValue": "0a7fd104-2918-44f2-b8aa-4e073756a99f"
+                  }
+                },
+                {
+                  "key": "telemetry.auto.version",
+                  "value": {
+                    "stringValue": "0.66b0"
+                  }
+                },
+                {
+                  "key": "telemetry.sdk.language",
+                  "value": {
+                    "stringValue": "python"
+                  }
+                },
+                {
+                  "key": "telemetry.sdk.name",
+                  "value": {
+                    "stringValue": "opentelemetry"
+                  }
+                },
+                {
+                  "key": "telemetry.sdk.version",
+                  "value": {
+                    "stringValue": "1.45.0"
+                  }
+                },
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ]
+            },
+            "scopeSpans": [
+              {
+                "scope": {
+                  "name": "opentelemetry.instrumentation.fastapi",
+                  "version": "0.66b0"
+                },
+                "spans": [
+                  {
+                    "attributes": [
+                      {
+                        "key": "asgi.event.type",
+                        "value": {
+                          "stringValue": "http.response.start"
+                        }
+                      },
+                      {
+                        "key": "http.response.status_code",
+                        "value": {
+                          "intValue": "200"
+                        }
+                      }
+                    ],
+                    "endTimeUnixNano": "1791241460093087888",
+                    "kind": "SPAN_KIND_INTERNAL",
+                    "name": "GET /healthz http send",
+                    "parentSpanId": "yTgx6s7i82Q=",
+                    "spanId": "0dsAOeft8+s=",
+                    "startTimeUnixNano": "1791241460093075263",
+                    "status": {},
+                    "traceId": "NVLIO+ZuMJZNVo4CB/muHA=="
+                  },
+                  {
+                    "attributes": [
+                      {
+                        "key": "asgi.event.type",
+                        "value": {
+                          "stringValue": "http.response.body"
+                        }
+                      }
+                    ],
+                    "endTimeUnixNano": "1791241460093249513",
+                    "kind": "SPAN_KIND_INTERNAL",
+                    "name": "GET /healthz http send",
+                    "parentSpanId": "yTgx6s7i82Q=",
+                    "spanId": "eg7e1+5p7DM=",
+                    "startTimeUnixNano": "1791241460093244138",
+                    "status": {},
+                    "traceId": "NVLIO+ZuMJZNVo4CB/muHA=="
+                  },
+                  {
+                    "attributes": [
+                      {
+                        "key": "url.scheme",
+                        "value": {
+                          "stringValue": "http"
+                        }
+                      },
+                      {
+                        "key": "server.port",
+                        "value": {
+                          "intValue": "8000"
+                        }
+                      },
+                      {
+                        "key": "network.protocol.version",
+                        "value": {
+                          "stringValue": "1.1"
+                        }
+                      },
+                      {
+                        "key": "user_agent.original",
+                        "value": {
+                          "stringValue": "Python-urllib/3.12"
+                        }
+                      },
+                      {
+                        "key": "client.address",
+                        "value": {
+                          "stringValue": "127.0.0.1"
+                        }
+                      },
+                      {
+                        "key": "client.port",
+                        "value": {
+                          "intValue": "45322"
+                        }
+                      },
+                      {
+                        "key": "http.response.status_code",
+                        "value": {
+                          "intValue": "200"
+                        }
+                      },
+                      {
+                        "key": "http.request.method",
+                        "value": {
+                          "stringValue": "GET"
+                        }
+                      },
+                      {
+                        "key": "url.path",
+                        "value": {
+                          "stringValue": "/healthz"
+                        }
+                      },
+                      {
+                        "key": "server.address",
+                        "value": {
+                          "stringValue": "127.0.0.1:8000"
+                        }
+                      },
+                      {
+                        "key": "http.route",
+                        "value": {
+                          "stringValue": "/healthz"
+                        }
+                      }
+                    ],
+                    "endTimeUnixNano": "1791241460093285555",
+                    "kind": "SPAN_KIND_SERVER",
+                    "name": "GET /healthz",
+                    "spanId": "yTgx6s7i82Q=",
+                    "startTimeUnixNano": "1791241460092746722",
+                    "status": {},
+                    "traceId": "NVLIO+ZuMJZNVo4CB/muHA=="
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "5436fa25feeebf360cb6769e917dad89": {
+      "metrics": {
+        "inspectedBytes": "29714"
+      },
+      "trace": {
+        "resourceSpans": [
+          {
+            "resource": {
+              "attributes": [
+                {
+                  "key": "service.instance.id",
+                  "value": {
+                    "stringValue": "0a7fd104-2918-44f2-b8aa-4e073756a99f"
+                  }
+                },
+                {
+                  "key": "telemetry.auto.version",
+                  "value": {
+                    "stringValue": "0.66b0"
+                  }
+                },
+                {
+                  "key": "telemetry.sdk.language",
+                  "value": {
+                    "stringValue": "python"
+                  }
+                },
+                {
+                  "key": "telemetry.sdk.name",
+                  "value": {
+                    "stringValue": "opentelemetry"
+                  }
+                },
+                {
+                  "key": "telemetry.sdk.version",
+                  "value": {
+                    "stringValue": "1.45.0"
+                  }
+                },
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ]
+            },
+            "scopeSpans": [
+              {
+                "scope": {
+                  "name": "opentelemetry.instrumentation.fastapi",
+                  "version": "0.66b0"
+                },
+                "spans": [
+                  {
+                    "attributes": [
+                      {
+                        "key": "asgi.event.type",
+                        "value": {
+                          "stringValue": "http.response.start"
+                        }
+                      },
+                      {
+                        "key": "http.response.status_code",
+                        "value": {
+                          "intValue": "200"
+                        }
+                      }
+                    ],
+                    "endTimeUnixNano": "1791241454990518094",
+                    "kind": "SPAN_KIND_INTERNAL",
+                    "name": "GET /healthz http send",
+                    "parentSpanId": "9SspL0KOsRc=",
+                    "spanId": "C1okvrO2TK8=",
+                    "startTimeUnixNano": "1791241454990504677",
+                    "status": {},
+                    "traceId": "VDb6Jf7uvzYMtnaekX2tiQ=="
+                  },
+                  {
+                    "attributes": [
+                      {
+                        "key": "asgi.event.type",
+                        "value": {
+                          "stringValue": "http.response.body"
+                        }
+                      }
+                    ],
+                    "endTimeUnixNano": "1791241454990757802",
+                    "kind": "SPAN_KIND_INTERNAL",
+                    "name": "GET /healthz http send",
+                    "parentSpanId": "9SspL0KOsRc=",
+                    "spanId": "VllW60JiTKk=",
+                    "startTimeUnixNano": "1791241454990746261",
+                    "status": {},
+                    "traceId": "VDb6Jf7uvzYMtnaekX2tiQ=="
+                  },
+                  {
+                    "attributes": [
+                      {
+                        "key": "url.scheme",
+                        "value": {
+                          "stringValue": "http"
+                        }
+                      },
+                      {
+                        "key": "server.port",
+                        "value": {
+                          "intValue": "8000"
+                        }
+                      },
+                      {
+                        "key": "network.protocol.version",
+                        "value": {
+                          "stringValue": "1.1"
+                        }
+                      },
+                      {
+                        "key": "user_agent.original",
+                        "value": {
+                          "stringValue": "Python-urllib/3.12"
+                        }
+                      },
+                      {
+                        "key": "client.address",
+                        "value": {
+                          "stringValue": "127.0.0.1"
+                        }
+                      },
+                      {
+                        "key": "client.port",
+                        "value": {
+                          "intValue": "45320"
+                        }
+                      },
+                      {
+                        "key": "http.response.status_code",
+                        "value": {
+                          "intValue": "200"
+                        }
+                      },
+                      {
+                        "key": "http.request.method",
+                        "value": {
+                          "stringValue": "GET"
+                        }
+                      },
+                      {
+                        "key": "url.path",
+                        "value": {
+                          "stringValue": "/healthz"
+                        }
+                      },
+                      {
+                        "key": "server.address",
+                        "value": {
+                          "stringValue": "127.0.0.1:8000"
+                        }
+                      },
+                      {
+                        "key": "http.route",
+                        "value": {
+                          "stringValue": "/healthz"
+                        }
+                      }
+                    ],
+                    "endTimeUnixNano": "1791241454990796927",
+                    "kind": "SPAN_KIND_SERVER",
+                    "name": "GET /healthz",
+                    "spanId": "9SspL0KOsRc=",
+                    "startTimeUnixNano": "1791241454990166677",
+                    "status": {},
+                    "traceId": "VDb6Jf7uvzYMtnaekX2tiQ=="
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "763e1463f0e7c288b4fc96a158726c39": {
+      "metrics": {
+        "inspectedBytes": "30899"
+      },
+      "trace": {
+        "resourceSpans": [
+          {
+            "resource": {
+              "attributes": [
+                {
+                  "key": "service.instance.id",
+                  "value": {
+                    "stringValue": "0a7fd104-2918-44f2-b8aa-4e073756a99f"
+                  }
+                },
+                {
+                  "key": "telemetry.auto.version",
+                  "value": {
+                    "stringValue": "0.66b0"
+                  }
+                },
+                {
+                  "key": "telemetry.sdk.language",
+                  "value": {
+                    "stringValue": "python"
+                  }
+                },
+                {
+                  "key": "telemetry.sdk.name",
+                  "value": {
+                    "stringValue": "opentelemetry"
+                  }
+                },
+                {
+                  "key": "telemetry.sdk.version",
+                  "value": {
+                    "stringValue": "1.45.0"
+                  }
+                },
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ]
+            },
+            "scopeSpans": [
+              {
+                "scope": {
+                  "name": "opentelemetry.instrumentation.fastapi",
+                  "version": "0.66b0"
+                },
+                "spans": [
+                  {
+                    "attributes": [
+                      {
+                        "key": "asgi.event.type",
+                        "value": {
+                          "stringValue": "http.response.start"
+                        }
+                      },
+                      {
+                        "key": "http.response.status_code",
+                        "value": {
+                          "intValue": "200"
+                        }
+                      }
+                    ],
+                    "endTimeUnixNano": "1791241444794005423",
+                    "kind": "SPAN_KIND_INTERNAL",
+                    "name": "GET /healthz http send",
+                    "parentSpanId": "cogo4lXmClY=",
+                    "spanId": "EZojVzfPNJk=",
+                    "startTimeUnixNano": "1791241444793986006",
+                    "status": {},
+                    "traceId": "dj4UY/Dnwoi0/JahWHJsOQ=="
+                  },
+                  {
+                    "attributes": [
+                      {
+                        "key": "asgi.event.type",
+                        "value": {
+                          "stringValue": "http.response.body"
+                        }
+                      }
+                    ],
+                    "endTimeUnixNano": "1791241444794220298",
+                    "kind": "SPAN_KIND_INTERNAL",
+                    "name": "GET /healthz http send",
+                    "parentSpanId": "cogo4lXmClY=",
+                    "spanId": "uruQN94JwcY=",
+                    "startTimeUnixNano": "1791241444794212798",
+                    "status": {},
+                    "traceId": "dj4UY/Dnwoi0/JahWHJsOQ=="
+                  },
+                  {
+                    "attributes": [
+                      {
+                        "key": "url.scheme",
+                        "value": {
+                          "stringValue": "http"
+                        }
+                      },
+                      {
+                        "key": "server.port",
+                        "value": {
+                          "intValue": "8000"
+                        }
+                      },
+                      {
+                        "key": "network.protocol.version",
+                        "value": {
+                          "stringValue": "1.1"
+                        }
+                      },
+                      {
+                        "key": "user_agent.original",
+                        "value": {
+                          "stringValue": "Python-urllib/3.12"
+                        }
+                      },
+                      {
+                        "key": "client.address",
+                        "value": {
+                          "stringValue": "127.0.0.1"
+                        }
+                      },
+                      {
+                        "key": "client.port",
+                        "value": {
+                          "intValue": "45306"
+                        }
+                      },
+                      {
+                        "key": "http.response.status_code",
+                        "value": {
+                          "intValue": "200"
+                        }
+                      },
+                      {
+                        "key": "http.request.method",
+                        "value": {
+                          "stringValue": "GET"
+                        }
+                      },
+                      {
+                        "key": "url.path",
+                        "value": {
+                          "stringValue": "/healthz"
+                        }
+                      },
+                      {
+                        "key": "server.address",
+                        "value": {
+                          "stringValue": "127.0.0.1:8000"
+                        }
+                      },
+                      {
+                        "key": "http.route",
+                        "value": {
+                          "stringValue": "/healthz"
+                        }
+                      }
+                    ],
+                    "endTimeUnixNano": "1791241444794268839",
+                    "kind": "SPAN_KIND_SERVER",
+                    "name": "GET /healthz",
+                    "spanId": "cogo4lXmClY=",
+                    "startTimeUnixNano": "1791241444787906881",
+                    "status": {},
+                    "traceId": "dj4UY/Dnwoi0/JahWHJsOQ=="
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "b5591a581f030a3bbe07e0789b1962f6": {
+      "metrics": {
+        "inspectedBytes": "30966"
+      },
+      "trace": {
+        "resourceSpans": [
+          {
+            "resource": {
+              "attributes": [
+                {
+                  "key": "service.instance.id",
+                  "value": {
+                    "stringValue": "0a7fd104-2918-44f2-b8aa-4e073756a99f"
+                  }
+                },
+                {
+                  "key": "telemetry.auto.version",
+                  "value": {
+                    "stringValue": "0.66b0"
+                  }
+                },
+                {
+                  "key": "telemetry.sdk.language",
+                  "value": {
+                    "stringValue": "python"
+                  }
+                },
+                {
+                  "key": "telemetry.sdk.name",
+                  "value": {
+                    "stringValue": "opentelemetry"
+                  }
+                },
+                {
+                  "key": "telemetry.sdk.version",
+                  "value": {
+                    "stringValue": "1.45.0"
+                  }
+                },
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ]
+            },
+            "scopeSpans": [
+              {
+                "scope": {
+                  "name": "opentelemetry.instrumentation.fastapi",
+                  "version": "0.66b0"
+                },
+                "spans": [
+                  {
+                    "attributes": [
+                      {
+                        "key": "asgi.event.type",
+                        "value": {
+                          "stringValue": "http.response.start"
+                        }
+                      },
+                      {
+                        "key": "http.response.status_code",
+                        "value": {
+                          "intValue": "200"
+                        }
+                      }
+                    ],
+                    "endTimeUnixNano": "1791241465197580876",
+                    "kind": "SPAN_KIND_INTERNAL",
+                    "name": "GET /healthz http send",
+                    "parentSpanId": "kkzPzl1A43Q=",
+                    "spanId": "/f2WSnHlQIw=",
+                    "startTimeUnixNano": "1791241465197568460",
+                    "status": {},
+                    "traceId": "tVkaWB8DCju+B+B4mxli9g=="
+                  },
+                  {
+                    "attributes": [
+                      {
+                        "key": "asgi.event.type",
+                        "value": {
+                          "stringValue": "http.response.body"
+                        }
+                      }
+                    ],
+                    "endTimeUnixNano": "1791241465197808710",
+                    "kind": "SPAN_KIND_INTERNAL",
+                    "name": "GET /healthz http send",
+                    "parentSpanId": "kkzPzl1A43Q=",
+                    "spanId": "mfXsUyy+3YQ=",
+                    "startTimeUnixNano": "1791241465197800168",
+                    "status": {},
+                    "traceId": "tVkaWB8DCju+B+B4mxli9g=="
+                  },
+                  {
+                    "attributes": [
+                      {
+                        "key": "url.scheme",
+                        "value": {
+                          "stringValue": "http"
+                        }
+                      },
+                      {
+                        "key": "server.port",
+                        "value": {
+                          "intValue": "8000"
+                        }
+                      },
+                      {
+                        "key": "network.protocol.version",
+                        "value": {
+                          "stringValue": "1.1"
+                        }
+                      },
+                      {
+                        "key": "user_agent.original",
+                        "value": {
+                          "stringValue": "Python-urllib/3.12"
+                        }
+                      },
+                      {
+                        "key": "client.address",
+                        "value": {
+                          "stringValue": "127.0.0.1"
+                        }
+                      },
+                      {
+                        "key": "client.port",
+                        "value": {
+                          "intValue": "45324"
+                        }
+                      },
+                      {
+                        "key": "http.response.status_code",
+                        "value": {
+                          "intValue": "200"
+                        }
+                      },
+                      {
+                        "key": "http.request.method",
+                        "value": {
+                          "stringValue": "GET"
+                        }
+                      },
+                      {
+                        "key": "url.path",
+                        "value": {
+                          "stringValue": "/healthz"
+                        }
+                      },
+                      {
+                        "key": "server.address",
+                        "value": {
+                          "stringValue": "127.0.0.1:8000"
+                        }
+                      },
+                      {
+                        "key": "http.route",
+                        "value": {
+                          "stringValue": "/healthz"
+                        }
+                      }
+                    ],
+                    "endTimeUnixNano": "1791241465197858543",
+                    "kind": "SPAN_KIND_SERVER",
+                    "name": "GET /healthz",
+                    "spanId": "kkzPzl1A43Q=",
+                    "startTimeUnixNano": "1791241465197220460",
+                    "status": {},
+                    "traceId": "tVkaWB8DCju+B+B4mxli9g=="
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ca254e111ce2bc128c524439cffd2eea": {
+      "metrics": {
+        "inspectedBytes": "30899"
+      },
+      "trace": {
+        "resourceSpans": [
+          {
+            "resource": {
+              "attributes": [
+                {
+                  "key": "service.instance.id",
+                  "value": {
+                    "stringValue": "0a7fd104-2918-44f2-b8aa-4e073756a99f"
+                  }
+                },
+                {
+                  "key": "telemetry.auto.version",
+                  "value": {
+                    "stringValue": "0.66b0"
+                  }
+                },
+                {
+                  "key": "telemetry.sdk.language",
+                  "value": {
+                    "stringValue": "python"
+                  }
+                },
+                {
+                  "key": "telemetry.sdk.name",
+                  "value": {
+                    "stringValue": "opentelemetry"
+                  }
+                },
+                {
+                  "key": "telemetry.sdk.version",
+                  "value": {
+                    "stringValue": "1.45.0"
+                  }
+                },
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ]
+            },
+            "scopeSpans": [
+              {
+                "scope": {
+                  "name": "opentelemetry.instrumentation.fastapi",
+                  "version": "0.66b0"
+                },
+                "spans": [
+                  {
+                    "attributes": [
+                      {
+                        "key": "asgi.event.type",
+                        "value": {
+                          "stringValue": "http.response.start"
+                        }
+                      },
+                      {
+                        "key": "http.response.status_code",
+                        "value": {
+                          "intValue": "200"
+                        }
+                      }
+                    ],
+                    "endTimeUnixNano": "1791241449887952092",
+                    "kind": "SPAN_KIND_INTERNAL",
+                    "name": "GET /healthz http send",
+                    "parentSpanId": "0bunZT9kV64=",
+                    "spanId": "BheQm4TfzP4=",
+                    "startTimeUnixNano": "1791241449887933717",
+                    "status": {},
+                    "traceId": "yiVOERzivBKMUkQ5z/0u6g=="
+                  },
+                  {
+                    "attributes": [
+                      {
+                        "key": "asgi.event.type",
+                        "value": {
+                          "stringValue": "http.response.body"
+                        }
+                      }
+                    ],
+                    "endTimeUnixNano": "1791241449888238175",
+                    "kind": "SPAN_KIND_INTERNAL",
+                    "name": "GET /healthz http send",
+                    "parentSpanId": "0bunZT9kV64=",
+                    "spanId": "/01AmsdbSu4=",
+                    "startTimeUnixNano": "1791241449888230467",
+                    "status": {},
+                    "traceId": "yiVOERzivBKMUkQ5z/0u6g=="
+                  },
+                  {
+                    "attributes": [
+                      {
+                        "key": "url.scheme",
+                        "value": {
+                          "stringValue": "http"
+                        }
+                      },
+                      {
+                        "key": "server.port",
+                        "value": {
+                          "intValue": "8000"
+                        }
+                      },
+                      {
+                        "key": "network.protocol.version",
+                        "value": {
+                          "stringValue": "1.1"
+                        }
+                      },
+                      {
+                        "key": "user_agent.original",
+                        "value": {
+                          "stringValue": "Python-urllib/3.12"
+                        }
+                      },
+                      {
+                        "key": "client.address",
+                        "value": {
+                          "stringValue": "127.0.0.1"
+                        }
+                      },
+                      {
+                        "key": "client.port",
+                        "value": {
+                          "intValue": "45318"
+                        }
+                      },
+                      {
+                        "key": "http.response.status_code",
+                        "value": {
+                          "intValue": "200"
+                        }
+                      },
+                      {
+                        "key": "http.request.method",
+                        "value": {
+                          "stringValue": "GET"
+                        }
+                      },
+                      {
+                        "key": "url.path",
+                        "value": {
+                          "stringValue": "/healthz"
+                        }
+                      },
+                      {
+                        "key": "server.address",
+                        "value": {
+                          "stringValue": "127.0.0.1:8000"
+                        }
+                      },
+                      {
+                        "key": "http.route",
+                        "value": {
+                          "stringValue": "/healthz"
+                        }
+                      }
+                    ],
+                    "endTimeUnixNano": "1791241449888293050",
+                    "kind": "SPAN_KIND_SERVER",
+                    "name": "GET /healthz",
+                    "spanId": "0bunZT9kV64=",
+                    "startTimeUnixNano": "1791241449887475092",
+                    "status": {},
+                    "traceId": "yiVOERzivBKMUkQ5z/0u6g=="
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

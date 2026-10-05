@@ -1,0 +1,7 @@
+{
+  "exit_code": 0,
+  "finished_at": "2026-10-05T23:05:10.007960Z",
+  "incident_id": "20261005T230442Z-fb3e8d84340b",
+  "response": "Inspected `alert.json`, `context.json`, `logs.json`, and `traces.json`. Confirmed:\n\n- Alert: `ResponderTest`\n- Summary: test notification; no incident to fix\n- Endpoint: `unknown`\n- Logs: no result streams\n- Traces: five saved entries\n- No application code or repository files were modified\n\nTEST ALERT RECEIVED - no incident to fix",
+  "state": "completed"
+}

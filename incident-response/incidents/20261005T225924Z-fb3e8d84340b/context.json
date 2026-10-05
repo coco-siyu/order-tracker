@@ -1,0 +1,10 @@
+{
+  "dashboard_url": null,
+  "endpoint": "unknown",
+  "loki_query": "{service_name=\"order-tracker\"}",
+  "query_end": "2026-10-05T22:59:54.795737Z",
+  "query_start": "2026-10-05T22:57:24.795737Z",
+  "tempo_query": "{ resource.service.name = \"order-tracker\" }",
+  "time_window": "60 seconds",
+  "trace_ids": []
+}
