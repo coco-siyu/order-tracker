@@ -1,3 +1,4 @@
+import logging
 import os
 import sqlite3
 from contextlib import asynccontextmanager
@@ -7,11 +8,14 @@ from uuid import uuid4
 
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
+from opentelemetry import trace
 from pydantic import BaseModel, Field
 
 
 DB_PATH = Path(os.getenv("ORDER_DB_PATH", "data/orders.db"))
 STATUSES = {"received", "preparing", "shipped", "delivered"}
+logger = logging.getLogger("order_tracker")
+tracer = trace.get_tracer("order_tracker.order_lookup")
 
 
 def connect():
@@ -100,11 +104,28 @@ def list_orders():
 
 @app.get("/api/orders/{order_id}")
 def get_order(order_id: str):
-    with connect() as db:
-        row = db.execute("SELECT * FROM orders WHERE id = ?", (order_id,)).fetchone()
-    if row is None:
-        raise HTTPException(404, "Order not found")
-    return order_detail(row)
+    with tracer.start_as_current_span("order.lookup") as span:
+        span.set_attribute("order.id", order_id)
+
+        with connect() as db:
+            row = db.execute(
+                "SELECT * FROM orders WHERE id = ?", (order_id,)
+            ).fetchone()
+
+        found = row is not None
+        span.set_attribute("order.found", found)
+        if not found:
+            logger.warning(
+                "Order lookup failed",
+                extra={"order_id": order_id, "lookup_status": "not_found"},
+            )
+            raise HTTPException(404, "Order not found")
+
+        logger.info(
+            "Order lookup succeeded",
+            extra={"order_id": order_id, "lookup_status": "found"},
+        )
+        return order_detail(row)
 
 
 @app.post("/api/orders", status_code=201)

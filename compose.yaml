@@ -1,4 +1,4 @@
-name: order-tracker
+# name: order-tracker
 
 services:
   app:
@@ -8,6 +8,14 @@ services:
       - "127.0.0.1:${ORDER_TRACKER_PORT:-8000}:8000"
     environment:
       ORDER_DB_PATH: /data/orders.db
+      OTEL_SERVICE_NAME: order-tracker
+      OTEL_TRACES_EXPORTER: console
+      OTEL_METRICS_EXPORTER: console
+      OTEL_LOGS_EXPORTER: console
+      OTEL_METRIC_EXPORT_INTERVAL: "5000"
+      OTEL_SEMCONV_STABILITY_OPT_IN: http
+      OTEL_PYTHON_LOG_CORRELATION: "true"
+      OTEL_PYTHON_LOG_LEVEL: info
     volumes:
       - orders:/data
     restart: unless-stopped
