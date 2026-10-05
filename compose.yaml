@@ -80,6 +80,7 @@ services:
       GF_SECURITY_ADMIN_USER: admin
       GF_SECURITY_ADMIN_PASSWORD: admin
       GF_USERS_ALLOW_SIGN_UP: "false"
+      INCIDENT_WEBHOOK_TOKEN: ${INCIDENT_WEBHOOK_TOKEN:-}
     volumes:
       - grafana:/var/lib/grafana
       - ./observability/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources:ro
@@ -92,6 +93,8 @@ services:
       - prometheus
       - loki
       - tempo
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     restart: unless-stopped
 
 volumes:

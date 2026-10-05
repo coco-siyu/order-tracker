@@ -1,0 +1,6 @@
+{
+  "error": "OverflowError: date value out of range",
+  "finished_at": "2026-10-05T23:30:11.492229Z",
+  "incident_id": "20261005T233011Z-2bbecf05fd99bdb0",
+  "state": "failed"
+}

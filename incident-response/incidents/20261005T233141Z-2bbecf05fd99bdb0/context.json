@@ -1,0 +1,31 @@
+{
+  "dashboard_url": "http://127.0.0.1:3000/d/order-tracker-observability/order-tracker-observability",
+  "endpoint": "/api/orders/{order_id}",
+  "loki_query": "{service_name=\"order-tracker\"}",
+  "query_end": "2026-10-05T23:32:11.495177Z",
+  "query_start": "2026-10-05T23:29:41.495177Z",
+  "tempo_query": "{ resource.service.name = \"order-tracker\" }",
+  "time_window": "1 minute",
+  "trace_ids": [
+    "1cad524ba8ae5e6d0bf53c33c83a50f3",
+    "26c3b522a7734ad4028c3954337063fe",
+    "2f3fe20d8b20d9609105496b634a9072",
+    "317c375cdcaaddd1a8128459f68fa3b8",
+    "3913614c0c0687e0c36f333bdd71638f",
+    "5b3b272bfad04ec2be46bdda56255a8e",
+    "70046a6d12a88727ffa9fd59e4e9b5d7",
+    "7a753f91be1e7e1126e3beaab58723ab",
+    "7ef08a9117346546c1d49196aa018a3e",
+    "8079b7ea3ad62dbb2cbf57fd5282fe2d",
+    "807a5e4abead652edb8b3d8e24ce8a75",
+    "8d216f38f1d6c4c8c82eaf64f72e1235",
+    "8eb99e0d5142025d983df249c7f7195d",
+    "905944bad6207ad6c73afd6ada92c5ab",
+    "9cacb5c4440af50f65fdb65c1c1e9f00",
+    "ab8bb085a9e3c4929d1c157bead2e306",
+    "af67f5181ed37da446985b5dfd7786ed",
+    "b16d07afc646c0050f31141056d1c791",
+    "c154a849a2e454511f11400eb264ca69",
+    "e9ae419a95dbaa60ae83767ca0a57fb2"
+  ]
+}

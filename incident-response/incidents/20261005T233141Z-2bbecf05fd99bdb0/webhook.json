@@ -1,0 +1,64 @@
+{
+  "alerts": [
+    {
+      "annotations": {
+        "dashboard_url": "http://127.0.0.1:3000/d/order-tracker-observability/order-tracker-observability",
+        "description": "Endpoint /api/orders/{order_id} returned at least one 5xx response during the last 1 minute.",
+        "endpoint": "/api/orders/{order_id}",
+        "summary": "5xx responses detected on /api/orders/{order_id}",
+        "time_window": "1 minute"
+      },
+      "dashboardURL": "",
+      "endsAt": "0001-01-01T00:00:00Z",
+      "fingerprint": "2bbecf05fd99bdb0",
+      "generatorURL": "http://localhost:3000/alerting/grafana/order-tracker-5xx/view?orgId=1",
+      "labels": {
+        "alertname": "Order Tracker 5xx responses",
+        "grafana_folder": "Order Tracker",
+        "http_route": "/api/orders/{order_id}",
+        "service": "order-tracker",
+        "severity": "warning"
+      },
+      "orgId": 1,
+      "panelURL": "",
+      "ruleUID": "order-tracker-5xx",
+      "silenceURL": "http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3Dorder-tracker-5xx&matcher=http_route%3D%2Fapi%2Forders%2F%7Border_id%7D&matcher=service%3Dorder-tracker&matcher=severity%3Dwarning&orgId=1",
+      "startsAt": "2026-10-05T23:31:30Z",
+      "status": "firing",
+      "valueString": "[ var='A' labels={http_route=/api/orders/{order_id}} type='query' value=1.0909289259804724 ], [ var='B' labels={http_route=/api/orders/{order_id}} type='math' value=1 ]",
+      "values": {
+        "A": 1.0909289259804724,
+        "B": 1
+      }
+    }
+  ],
+  "appVersion": "12.4.11",
+  "commonAnnotations": {
+    "dashboard_url": "http://127.0.0.1:3000/d/order-tracker-observability/order-tracker-observability",
+    "description": "Endpoint /api/orders/{order_id} returned at least one 5xx response during the last 1 minute.",
+    "endpoint": "/api/orders/{order_id}",
+    "summary": "5xx responses detected on /api/orders/{order_id}",
+    "time_window": "1 minute"
+  },
+  "commonLabels": {
+    "alertname": "Order Tracker 5xx responses",
+    "grafana_folder": "Order Tracker",
+    "http_route": "/api/orders/{order_id}",
+    "service": "order-tracker",
+    "severity": "warning"
+  },
+  "externalURL": "http://localhost:3000/",
+  "groupKey": "{}:{alertname=\"Order Tracker 5xx responses\", grafana_folder=\"Order Tracker\"}",
+  "groupLabels": {
+    "alertname": "Order Tracker 5xx responses",
+    "grafana_folder": "Order Tracker"
+  },
+  "message": "**Firing**\n\nValue: A=1.0909289259804724, B=1\nLabels:\n - alertname = Order Tracker 5xx responses\n - grafana_folder = Order Tracker\n - http_route = /api/orders/{order_id}\n - service = order-tracker\n - severity = warning\nAnnotations:\n - dashboard_url = http://127.0.0.1:3000/d/order-tracker-observability/order-tracker-observability\n - description = Endpoint /api/orders/{order_id} returned at least one 5xx response during the last 1 minute.\n - endpoint = /api/orders/{order_id}\n - summary = 5xx responses detected on /api/orders/{order_id}\n - time_window = 1 minute\nSource: http://localhost:3000/alerting/grafana/order-tracker-5xx/view?orgId=1\nSilence: http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3Dorder-tracker-5xx&matcher=http_route%3D%2Fapi%2Forders%2F%7Border_id%7D&matcher=service%3Dorder-tracker&matcher=severity%3Dwarning&orgId=1\n",
+  "orgId": 1,
+  "receiver": "incident-responder",
+  "state": "alerting",
+  "status": "firing",
+  "title": "[FIRING:1] Order Tracker 5xx responses Order Tracker (/api/orders/{order_id} order-tracker warning)",
+  "truncatedAlerts": 0,
+  "version": "1"
+}

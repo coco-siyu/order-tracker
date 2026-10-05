@@ -1,6 +1,7 @@
 import json
 import sys
 import time
+from datetime import datetime
 from pathlib import Path
 
 from fastapi.testclient import TestClient
@@ -9,7 +10,8 @@ from fastapi.testclient import TestClient
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "incident-response"))
 
-from responder.main import Settings, create_app  # noqa: E402
+import responder.main as responder_main  # noqa: E402
+from responder.main import Settings, collect_evidence, create_app  # noqa: E402
 
 
 def wait_for_terminal_state(client: TestClient) -> dict:
@@ -95,3 +97,31 @@ def test_resolved_alert_does_not_start_agent(tmp_path):
     }
     assert called is False
     assert list(tmp_path.iterdir()) == []
+
+
+def test_firing_grafana_sentinel_end_time_uses_current_window(tmp_path, monkeypatch):
+    queries = []
+
+    def fake_get_json(base_url, path, params, timeout):
+        queries.append((base_url, path, params, timeout))
+        if path == "/api/search":
+            return {"traces": []}
+        return {"status": "success", "data": {"result": []}}
+
+    monkeypatch.setattr(responder_main, "http_get_json", fake_get_json)
+    settings = Settings(repo_root=ROOT, incidents_dir=tmp_path)
+    evidence = collect_evidence(
+        {
+            "status": "firing",
+            "startsAt": "2026-10-05T23:29:50Z",
+            "endsAt": "0001-01-01T00:00:00Z",
+            "annotations": {"time_window": "1 minute"},
+        },
+        settings,
+    )
+
+    query_start = datetime.fromisoformat(evidence["query_start"].replace("Z", "+00:00"))
+    query_end = datetime.fromisoformat(evidence["query_end"].replace("Z", "+00:00"))
+    assert query_start.year > 1970
+    assert query_start < query_end
+    assert len(queries) == 2

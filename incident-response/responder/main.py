@@ -155,12 +155,18 @@ def extract_trace_ids(value: Any) -> list[str]:
 
 def collect_evidence(alert: JsonObject, settings: Settings) -> JsonObject:
     annotations = alert.get("annotations") or {}
-    evaluation_end = parse_timestamp(alert.get("endsAt"), utc_now())
-    if evaluation_end.year >= 9999:
-        evaluation_end = utc_now()
+    now = utc_now()
+    evaluation_end = parse_timestamp(alert.get("endsAt"), now)
+    # Grafana uses year 1 for the end of an alert that is still firing and
+    # sometimes uses year 9999 for an open-ended range.
+    if evaluation_end.year <= 1970 or evaluation_end.year >= 9999:
+        evaluation_end = now
     window_seconds = parse_duration(annotations.get("time_window"), 60)
     # Add a small margin because collection happens after Grafana evaluates the rule.
     query_start = evaluation_end - timedelta(seconds=window_seconds + 60)
+    alert_start = parse_timestamp(alert.get("startsAt"), query_start)
+    if 1970 < alert_start.year < 9999:
+        query_start = min(query_start, alert_start - timedelta(seconds=60))
     query_end = evaluation_end + timedelta(seconds=30)
     endpoint = affected_endpoint(alert)
 

@@ -49,3 +49,17 @@ Optional settings:
 | `INCIDENT_AGENT_TIMEOUT` | `900` | Headless agent timeout in seconds |
 | `INCIDENT_DATA_DIR` | `incident-response/incidents` | Evidence directory |
 | `INCIDENT_WEBHOOK_TOKEN` | unset | Optional bearer token required by `/alerts` |
+
+## Grafana webhook
+
+Question 6 uses the ignored root `.env` file to share
+`INCIDENT_WEBHOOK_TOKEN` with Grafana and this service. Because Grafana runs in
+Docker, start the responder with an authenticated Docker-reachable listener:
+
+```bash
+INCIDENT_RESPONSE_HOST=0.0.0.0 ./incident-response/run.sh
+```
+
+Do not use `0.0.0.0` without setting `INCIDENT_WEBHOOK_TOKEN`. Grafana sends
+the token as a Bearer credential to the provisioned contact point at
+`http://host.docker.internal:8001/alerts`.
