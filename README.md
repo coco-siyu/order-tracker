@@ -22,6 +22,27 @@ ORDER_TRACKER_PORT=18080 docker compose up --build -d --wait
 
 Run tests with `uv run --frozen pytest -q`. Stop the app with `docker compose down`. Add `-v` only if you also want to delete the order data.
 
+## Observability
+
+Docker Compose also starts an OpenTelemetry Collector, Prometheus, Loki,
+Tempo, and Grafana. The application sends metrics, logs, and traces to the
+Collector over OTLP/HTTP. The Collector exposes metrics for Prometheus and
+forwards logs to Loki and traces to Tempo.
+
+Open Grafana at <http://127.0.0.1:3000> and sign in with `admin` / `admin`.
+The provisioned **Order Tracker Observability** dashboard shows request counts,
+request rates by route and status, error rates, and recent application logs.
+
+Generate a not-found lookup for the Homework 4 telemetry exercise:
+
+```bash
+curl -i http://127.0.0.1:8000/api/orders/standard-1002
+```
+
+Prometheus is available at <http://127.0.0.1:9090>, Loki at
+<http://127.0.0.1:3100>, and Tempo at <http://127.0.0.1:3200> for local
+troubleshooting. All observability configuration is stored in `observability/`.
+
 ## API
 
 | Method | Path | Purpose |

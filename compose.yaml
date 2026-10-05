@@ -9,13 +9,17 @@ services:
     environment:
       ORDER_DB_PATH: /data/orders.db
       OTEL_SERVICE_NAME: order-tracker
-      OTEL_TRACES_EXPORTER: console
-      OTEL_METRICS_EXPORTER: console
-      OTEL_LOGS_EXPORTER: console
+      OTEL_TRACES_EXPORTER: otlp_proto_http
+      OTEL_METRICS_EXPORTER: otlp_proto_http
+      OTEL_LOGS_EXPORTER: otlp_proto_http
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4318
+      OTEL_EXPORTER_OTLP_PROTOCOL: http/protobuf
       OTEL_METRIC_EXPORT_INTERVAL: "5000"
       OTEL_SEMCONV_STABILITY_OPT_IN: http
       OTEL_PYTHON_LOG_CORRELATION: "true"
       OTEL_PYTHON_LOG_LEVEL: info
+    depends_on:
+      - otel-collector
     volumes:
       - orders:/data
     restart: unless-stopped
@@ -25,8 +29,76 @@ services:
       timeout: 3s
       retries: 12
 
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.161.0
+    command: ["--config=/etc/otelcol-contrib/config.yaml"]
+    volumes:
+      - ./observability/otel-collector.yaml:/etc/otelcol-contrib/config.yaml:ro
+    ports:
+      - "127.0.0.1:13133:13133"
+    depends_on:
+      - loki
+      - tempo
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:v3.13.3
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+      - --web.enable-lifecycle
+    volumes:
+      - ./observability/prometheus.yaml:/etc/prometheus/prometheus.yml:ro
+      - prometheus:/prometheus
+    ports:
+      - "127.0.0.1:9090:9090"
+    restart: unless-stopped
+
+  loki:
+    image: grafana/loki:3.7.7
+    command: ["-config.file=/etc/loki/local-config.yaml"]
+    volumes:
+      - ./observability/loki.yaml:/etc/loki/local-config.yaml:ro
+      - loki:/loki
+    ports:
+      - "127.0.0.1:3100:3100"
+    restart: unless-stopped
+
+  tempo:
+    image: grafana/tempo:2.10.8
+    command: ["-config.file=/etc/tempo.yaml"]
+    volumes:
+      - ./observability/tempo.yaml:/etc/tempo.yaml:ro
+      - tempo:/var/tempo
+    ports:
+      - "127.0.0.1:3200:3200"
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:12.4.11
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_USERS_ALLOW_SIGN_UP: "false"
+    volumes:
+      - grafana:/var/lib/grafana
+      - ./observability/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources:ro
+      - ./observability/grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./observability/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    ports:
+      - "127.0.0.1:3000:3000"
+    depends_on:
+      - prometheus
+      - loki
+      - tempo
+    restart: unless-stopped
+
 volumes:
   orders:
+  prometheus:
+  loki:
+  tempo:
+  grafana:
 
 networks:
   default:
